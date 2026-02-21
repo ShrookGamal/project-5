@@ -7,6 +7,7 @@ const navLinks = document.querySelectorAll('.nav-links a');
 const galleryItems = document.querySelectorAll('.gallery-item');
 const whyCards = document.querySelectorAll('.why-card');
 const orderForm = document.querySelector('.order-form');
+const body = document.body;
 
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 50);
@@ -14,7 +15,6 @@ window.addEventListener('scroll', () => {
     let current = "";
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 150) {
             current = section.getAttribute("id");
         }
@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach((link) => {
         link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
+        if (link.getAttribute("href") === `#${current}`) {
             link.classList.add("active");
         }
     });
@@ -58,6 +58,11 @@ if (menuBtn) {
     menuBtn.addEventListener('click', function() {
         mobileOverlay.classList.toggle('active');
         this.classList.toggle('open');
+        if (mobileOverlay.classList.contains('active')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
     });
 }
 
@@ -65,6 +70,7 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileOverlay.classList.remove('active');
         if (menuBtn) menuBtn.classList.remove('open');
+        body.style.overflow = 'auto';
     });
 });
 

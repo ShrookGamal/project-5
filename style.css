@@ -1196,3 +1196,91 @@ body {
         margin-bottom: 20px;
     }
 }
+/* --- إعدادات الموبايل (أقل من 992px) --- */
+@media (max-width: 992px) {
+    /* 1. إخفاء زر الاتصال تماماً في الموبايل */
+    .call-btn.desktop-only {
+        display: none !important;
+    }
+
+    /* 2. ضبط الهيدر في الموبايل */
+    .navbar {
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none; /* إخفاء روابط الديسكتوب */
+    }
+
+    /* 3. تصميم أيقونة المنيو (الهامبرجر) */
+    .mobile-menu-icon {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 10001; /* فوق كل شيء */
+    }
+
+    .mobile-menu-icon .bar {
+        width: 30px;
+        height: 3px;
+        background: #0056b3;
+        transition: 0.4s;
+        border-radius: 2px;
+    }
+
+    /* تحويل الأيقونة لعلامة X عند الفتح */
+    .mobile-menu-icon.open .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-menu-icon.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-icon.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* 4. تصميم القائمة الجانبية (Overlay) */
+    .mobile-overlay {
+        position: fixed;
+        top: 0;
+        right: -100%; /* مخفية خارج الشاشة جهة اليمين */
+        width: 80%; /* تأخذ 80% من عرض الشاشة */
+        height: 100vh;
+        background: white;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        z-index: 10000;
+    }
+
+    .mobile-overlay.active {
+        right: 0; /* تظهر عند إضافة كلاس active */
+    }
+
+    .mobile-nav-links {
+        list-style: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    .mobile-nav-links li {
+        margin: 25px 0;
+    }
+
+    .mobile-nav-links a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #1a1a1a;
+        font-weight: 700;
+    }
+
+    /* منع السكرول عند فتح المنيو */
+    body.no-scroll {
+        overflow: hidden;
+    }
+}

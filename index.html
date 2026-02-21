@@ -13,35 +13,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-   <header class="main-header">
+<header class="main-header">
     <nav class="navbar">
+         <!-- اللوجو -->
         <div class="logo-container">
-            <div class="logo-icon"><i class="fas fa-snowflake fa-spin-slow"></i></div>
+            <div class="logo-icon">
+                <i class="fas fa-snowflake fa-spin-slow"></i>
+            </div>
             <span class="logo-text">يوسف إسماعيل <br><small>للتكييف المركزي</small></span>
+            
         </div>
-        <!-- روابط اللاب توب -->
+              <!-- روابط الناف بار للاب توب -->
         <ul class="nav-links">
             <li><a href="#home">الرئيسية</a></li>
-            <li><a href="#about" class="active">من نحن</a></li>
+            <li><a href="#about">من نحن</a></li>
             <li><a href="#services">خدماتنا</a></li>
             <li><a href="#gallery">معرض أعمالنا</a></li>
             <li><a href="#why-us">لماذا نحن</a></li>
             <li><a href="#contact">تواصل معنا</a></li>
         </ul>
+        <!-- الأزرار (تظهر في الموبايل واللاب توب حسب الإعدادات) -->
         <div class="nav-actions">
-            <a href="tel:0565718127" class="call-btn">
+            <!-- زر الاتصال - سيختفي في الموبايل عبر CSS -->
+            <a href="tel:0565718127" class="call-btn desktop-only">
                 <i class="fas fa-phone-alt"></i>
                 <span>إتصل الآن</span>
             </a>
-            <!-- أيقونة الموبايل تظهر فقط في الشاشات الصغيرة -->
+            
+            <!-- أيقونة المنيو للموبايل فقط -->
             <div class="mobile-menu-icon" id="menuToggle">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
         </div>
-    </nav>
+
+          </nav>
+    
+    <!-- القائمة الجانبية للموبايل -->
+    <div class="mobile-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#gallery">معرض أعمالنا</a></li>
+            <li><a href="#why-us">لماذا نحن</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </div>
 </header>
 
     <!-- Hero Section -->
