@@ -1,4 +1,3 @@
-/* الألوان والأساسيات */
 :root {
     --primary-color: #0056b3;
     --secondary-color: #00d4ff;
@@ -17,11 +16,10 @@
 }
 
 body {
-    overflow-x: hidden; /* حل مشكلة الفراغ الأبيض العرضي */
+    overflow-x: hidden; 
     background-color: var(--white);
 }
 
-/* الهيدر والناف بار */
 .main-header {
     position: fixed;
     top: 0;
@@ -47,7 +45,6 @@ body {
     padding: 0 5%;
 }
 
-/* اللوجو */
 .logo-container {
     display: flex;
     align-items: center;
@@ -77,7 +74,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* روابط الناف بار */
 .nav-links {
     display: flex;
     list-style: none;
@@ -108,7 +104,6 @@ body {
     width: 100%;
 }
 
-/* زر الاتصال */
 .call-btn {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -128,7 +123,6 @@ body {
     box-shadow: 0 15px 25px rgba(0,86,179,0.4);
 }
 
-/* Hero Section */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -224,7 +218,6 @@ body {
     color: white;
 }
 
-/* الموبايل منيو */
 .mobile-menu-icon {
     display: none;
     cursor: pointer;
@@ -274,7 +267,6 @@ body {
     font-weight: bold;
 }
 
-/* حل مشاكل الموبايل Responsive */
 @media (max-width: 992px) {
     .nav-links { display: none; }
     .mobile-menu-icon { display: block; }
@@ -288,34 +280,32 @@ body {
 
 @media (max-width: 480px) {
     .logo-text { font-size: 1rem; }
-    .call-btn span { display: none; } /* يظهر الأيقونة فقط في الشاشات الصغيرة جداً */
+    .call-btn span { display: none; } 
     .call-btn { padding: 12px; border-radius: 50%; }
 }
-/* --- إصلاح مشكلة المنيو في اللاب توب --- */
 .mobile-menu-icon {
-    display: none; /* مخفي افتراضياً في اللاب توب */
+    display: none; 
 }
 
 .mobile-overlay {
-    display: none; /* مخفي في اللاب توب */
+    display: none; 
 }
 
 @media (max-width: 992px) {
     .nav-links {
-        display: none; /* إخفاء روابط اللاب توب في الموبايل */
+        display: none; 
     }
     .mobile-menu-icon {
-        display: block; /* إظهار أيقونة المنيو في الموبايل فقط */
+        display: block; 
     }
     .mobile-overlay {
-        display: flex; /* السماح بظهوره في الموبايل عند التفعيل */
+        display: flex; 
     }
 }
 
-/* --- تصميم سكشن من نحن المطور --- */
 .about-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); /* دجراديه هادئ ومنعش */
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%); 
     position: relative;
 }
 
@@ -327,7 +317,7 @@ body {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* مساحة أكبر للكلام */
+    grid-template-columns: 1.2fr 0.8fr; 
     gap: 50px;
     align-items: center;
 }
@@ -359,7 +349,6 @@ body {
     text-align: justify;
 }
 
-/* كروت المعلومات (الرؤية والرسالة) */
 .about-cards-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -398,7 +387,6 @@ body {
     line-height: 1.5;
 }
 
-/* الإحصائيات */
 .about-stats {
     display: flex;
     gap: 40px;
@@ -423,7 +411,6 @@ body {
     color: #666;
 }
 
-/* الجانب البصري (الصورة) */
 .about-visual-box {
     position: relative;
 }
@@ -450,7 +437,6 @@ body {
     z-index: -1;
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 992px) {
     .about-grid {
         grid-template-columns: 1fr;
@@ -473,16 +459,14 @@ body {
         font-size: 2rem;
     }
 }
-/* --- Services Section Styles --- */
 .services-section {
     padding: 120px 0;
     position: relative;
-    background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #1a365d 100%); /* دجراديه عميق وفخم */
+    background: linear-gradient(135deg, #0a192f 0%, #112240 50%, #1a365d 100%);
     color: white;
     overflow: hidden;
 }
 
-/* حركة ديكورية في الخلفية */
 .services-bg-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -524,17 +508,15 @@ body {
     line-height: 1.8;
 }
 
-/* شبكة الكروت */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
     gap: 30px;
     padding: 0 5%;
 }
 
-/* كارت الخدمة الإبداعي */
 .service-card {
-    background: rgba(255, 255, 255, 0.03); /* تأثير زجاجي ناعم */
+    background: rgba(255, 255, 255, 0.03); 
     backdrop-filter: blur(10px);
     padding: 40px;
     border-radius: 25px;
@@ -562,7 +544,7 @@ body {
 }
 
 .service-card:hover::before {
-    opacity: 0.1; /* وميض خفيف عند الوقوف على الكارت */
+    opacity: 0.1; 
 }
 
 .card-icon {
@@ -604,7 +586,6 @@ body {
     color: var(--secondary-color);
 }
 
-/* انميشن الظهور */
 [data-reveal="bottom"] {
     opacity: 0;
     transform: translateY(50px);
@@ -616,7 +597,6 @@ body {
     transform: translateY(0);
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
@@ -628,7 +608,6 @@ body {
         padding: 30px;
     }
 }
-/* --- Gallery Section Styles --- */
 .gallery-section {
     padding: 100px 0;
     background: #fdfdfd;
@@ -660,10 +639,9 @@ body {
     border-radius: 10px;
 }
 
-/* جريد متساوي الأبعاد */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية في اللاب توب */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -671,7 +649,7 @@ body {
 }
 
 .gallery-item {
-    aspect-ratio: 1 / 1; /* جعل الصورة مربعة تماماً، يمكنك تغييرها لـ 4/3 إذا أردتي مستطيل */
+    aspect-ratio: 1 / 1; 
     border-radius: 15px;
     overflow: hidden;
     position: relative;
@@ -687,11 +665,10 @@ body {
 .img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* لضمان ملء المساحة بدون تمطيط الصورة */
+    object-fit: cover; 
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* تأثير الطبقة الزجاجية عند الوقوف على الصورة */
 .hover-overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -708,32 +685,29 @@ body {
     opacity: 1;
 }
 
-/* حل مشاكل التجاوب للموبايل */
 @media (max-width: 992px) {
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* صورتين في الصف في التابلت */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 576px) {
     .portfolio-grid {
-        grid-template-columns: 1fr; /* صورة واحدة في الصف في الموبايل */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     .gallery-header .title {
         font-size: 1.8rem;
     }
 }
-/* --- Why Us Section Styles --- */
 .why-section {
     padding: 120px 0;
-    background: #050a18; /* خلفية داكنة جداً ليبرز النيون */
+    background: #050a18; 
     position: relative;
     overflow: hidden;
     color: white;
 }
 
-/* كرات مضيئة في الخلفية */
 .background-blobs .blob {
     position: absolute;
     width: 400px;
@@ -770,7 +744,6 @@ body {
     z-index: 1;
 }
 
-/* كارت النيون المتطور */
 .why-card {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
@@ -783,7 +756,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-/* خط النيون الذي يتحرك عند الهوفر */
 .why-card::before {
     content: '';
     position: absolute;
@@ -839,7 +811,6 @@ body {
     line-height: 1.8;
 }
 
-/* انميشن الظهور التدريجي */
 .why-card {
     opacity: 0;
     transform: translateY(50px);
@@ -850,12 +821,10 @@ body {
     transform: translateY(0);
 }
 
-/* التجاوب */
 @media (max-width: 768px) {
     .why-grid { grid-template-columns: 1fr; }
     .main-title { font-size: 1.8rem; }
 }
-/* --- سكشن تواصل معنا الاحترافي --- */
 .ultimate-contact {
     padding: 100px 0;
     background: #f4f7fa;
@@ -890,8 +859,6 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.05);
     border: 1px solid #eee;
 }
-
-/* ستايل رأس الكارد (الأيقونة والعنوان) */
 .card-head {
     text-align: center;
     margin-bottom: 30px;
@@ -909,7 +876,6 @@ body {
     color: #333;
 }
 
-/* ستايل الفورم */
 .order-form .input-group {
     margin-bottom: 15px;
 }
@@ -944,8 +910,6 @@ body {
 .submit-btn:hover {
     background: var(--secondary-color);
 }
-
-/* ستايل جانب الاتصال */
 .info-intro {
     text-align: center;
     color: #666;
@@ -1003,7 +967,6 @@ body {
     box-shadow: 0 5px 10px rgba(0,0,0,0.05);
 }
 
-/* الفوتر */
 .site-footer {
     background: white;
     padding: 30px;
@@ -1012,7 +975,6 @@ body {
     color: #777;
 }
 
-/* التجاوب مع الموبايل */
 @media (max-width: 992px) {
     .contact-flex-container {
         flex-direction: column;
@@ -1030,9 +992,8 @@ body {
         font-size: 1.8rem;
     }
 }
-/* --- Final Footer Styles --- */
 .final-footer {
-    background: #0f172a; /* لون كحلي غامق جداً وفخم */
+    background: #0f172a; 
     color: #cbd5e1;
     padding: 80px 0 40px;
     border-top: 5px solid var(--primary-color);
@@ -1041,7 +1002,7 @@ body {
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5%; /* يمنع الالتصاق بحواف الشاشة */
+    padding: 0 5%; 
 }
 
 .footer-main-grid {
@@ -1051,7 +1012,6 @@ body {
     margin-bottom: 60px;
 }
 
-/* العمود الأول */
 .f-logo-box {
     display: flex;
     align-items: center;
@@ -1075,7 +1035,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* الروابط السريعة */
 .f-title {
     color: white;
     font-size: 1.3rem;
@@ -1115,7 +1074,6 @@ body {
     padding-right: 10px;
 }
 
-/* بيانات التواصل */
 .f-contact-box {
     display: flex;
     flex-direction: column;
@@ -1139,14 +1097,13 @@ body {
     font-weight: 700;
 }
 
-/* الجزء السفلي (الحقوق والمبرمج) */
 .footer-bottom-area {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 30px;
     display: flex;
-    flex-direction: column; /* جعلهم تحت بعض */
-    align-items: center; /* سنتر ف النص */
-    gap: 10px; /* مسافة بين السطرين */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
     text-align: center;
 }
 
@@ -1169,8 +1126,6 @@ body {
 .dev-text a:hover {
     text-decoration: underline;
 }
-
-/* التجاوب مع الموبايل */
 @media (max-width: 992px) {
     .footer-main-grid {
         grid-template-columns: 1fr 1fr;
@@ -1196,30 +1151,25 @@ body {
         margin-bottom: 20px;
     }
 }
-/* --- إعدادات الموبايل (أقل من 992px) --- */
 @media (max-width: 992px) {
-    /* 1. إخفاء زر الاتصال تماماً في الموبايل */
     .call-btn.desktop-only {
         display: none !important;
     }
 
-    /* 2. ضبط الهيدر في الموبايل */
     .navbar {
         justify-content: space-between;
         padding: 10px 20px;
     }
 
     .nav-links {
-        display: none; /* إخفاء روابط الديسكتوب */
+        display: none; 
     }
-
-    /* 3. تصميم أيقونة المنيو (الهامبرجر) */
     .mobile-menu-icon {
         display: flex !important;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        z-index: 10001; /* فوق كل شيء */
+        z-index: 10001; 
     }
 
     .mobile-menu-icon .bar {
@@ -1229,8 +1179,6 @@ body {
         transition: 0.4s;
         border-radius: 2px;
     }
-
-    /* تحويل الأيقونة لعلامة X عند الفتح */
     .mobile-menu-icon.open .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -1240,13 +1188,11 @@ body {
     .mobile-menu-icon.open .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
-    /* 4. تصميم القائمة الجانبية (Overlay) */
     .mobile-overlay {
         position: fixed;
         top: 0;
-        right: -100%; /* مخفية خارج الشاشة جهة اليمين */
-        width: 80%; /* تأخذ 80% من عرض الشاشة */
+        right: -100%;
+        width: 80%; 
         height: 100vh;
         background: white;
         box-shadow: -10px 0 30px rgba(0,0,0,0.1);
@@ -1259,7 +1205,7 @@ body {
     }
 
     .mobile-overlay.active {
-        right: 0; /* تظهر عند إضافة كلاس active */
+        right: 0; 
     }
 
     .mobile-nav-links {
@@ -1278,8 +1224,6 @@ body {
         color: #1a1a1a;
         font-weight: 700;
     }
-
-    /* منع السكرول عند فتح المنيو */
     body.no-scroll {
         overflow: hidden;
     }
