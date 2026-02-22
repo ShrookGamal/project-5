@@ -1228,3 +1228,128 @@ body {
         overflow: hidden;
     }
 }
+.map-card-modern {
+    max-width: 1200px;
+    margin: 60px auto 0;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 8px solid white; 
+}
+.map-info-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.map-title-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pulse-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: relative;
+}
+.pulse-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.5;
+    animation: pulse-ring 1.5s infinite;
+}
+
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.map-title-box h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    font-weight: 800;
+}
+
+.map-title-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+.map-direct-btn {
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.map-direct-btn:hover {
+    background: var(--secondary-color);
+    transform: translateX(-5px);
+}
+.map-frame-inner {
+    width: 100%;
+    height: 450px;
+    background: #eee;
+}
+
+.map-frame-inner iframe {
+    filter: grayscale(0.3) contrast(1.1); 
+    transition: 0.5s;
+}
+
+.map-card-modern:hover iframe {
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    .map-info-overlay {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        top: 10px; left: 10px; right: 10px;
+        padding: 15px;
+    }
+    .map-title-box {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .map-card-modern {
+        border-radius: 25px;
+        margin: 40px 10px 0;
+        border-width: 4px;
+    }
+    .map-frame-inner {
+        height: 350px;
+    }
+}
